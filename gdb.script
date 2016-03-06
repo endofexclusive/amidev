@@ -1,0 +1,12 @@
+#set debug remote 1
+#set debug serial 1
+#set debug infrun 1
+#set debug target 1
+#set debug monitor 1
+#set serial baud 38400
+#set serial baud 230400
+#target remote slave_gdb
+
+#load
+#cont
+

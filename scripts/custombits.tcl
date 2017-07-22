@@ -3,7 +3,8 @@ list \
       [list int \
               [list setclr] \
               [list inten] \
-              [list exter] \
+              [list all 0 0x3fff] \
+              [list exter 13] \
               [list dsksync] \
               [list rbf] \
               [list aud3] \
@@ -92,5 +93,70 @@ list \
               [list r 8 0xf] \
               [list g 4 0xf] \
               [list b 0 0xf] \
+      ] \
+      [list beamcon0 \
+              [list harddis 14] \
+              [list lpendis] \
+              [list varvben] \
+              [list loldis] \
+              [list cscben] \
+              [list varvsyen] \
+              [list varhsyen] \
+              [list varbeamen] \
+              [list dual] \
+              [list pal] \
+              [list varcsyen] \
+              [list blanken] \
+              [list csytrue] \
+              [list vsytrue] \
+              [list hsytrue] \
+      ] \
+      [list potgo \
+              [list outry 15] \
+              [list datry] \
+              [list outrx] \
+              [list datrx] \
+              [list outly] \
+              [list datly] \
+              [list outlx] \
+              [list datlx] \
+              [list start 0] \
+      ] \
+      [list bltcon0 \
+              [list ash 12 0xf] \
+              [list usea 11] \
+              [list useb] \
+              [list usec] \
+              [list used] \
+              [list lf 0 0xff] \
+              [list start 12 0xf] \
+      ] \
+      [list bltcon1 \
+              [list bsh 12 0xf ] \
+              [list doff 7 ] \
+              [list efe 4 ] \
+              [list ife] \
+              [list fci] \
+              [list desc] \
+              [list line] \
+              [list texture 12 0xf] \
+              [list sign 6] \
+              [list sud 4] \
+              [list sul] \
+              [list aul] \
+              [list sing] \
+              [list oct  2 0x7] \
+              [list oct0 2 0x6] \
+              [list oct1 2 0x1] \
+              [list oct2 2 0x3] \
+              [list oct3 2 0x7] \
+              [list oct4 2 0x5] \
+              [list oct5 2 0x2] \
+              [list oct6 2 0x0] \
+              [list oct7 2 0x4] \
+      ] \
+      [list bltsize \
+              [list h 6 0x3ff ] \
+              [list w 0 0x3f] \
       ] \
 

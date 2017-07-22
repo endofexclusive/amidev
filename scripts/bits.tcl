@@ -20,7 +20,7 @@ proc printreg {reg} {
                         set bitnum [lindex $field 1]
                 }
                 set bname [string toupper "${regname}B_${fieldname}"]
-                puts [format "%-23s %2d" "#define $bname" $bitnum]
+                puts [format "%-31s %2d" "#define $bname" $bitnum]
                 set nextnum [expr {$bitnum - 1}]
         }
         set nextnum 15
@@ -34,10 +34,9 @@ proc printreg {reg} {
                 if {1 < [llength $field]} {
                         set bitnum [lindex $field 1]
                 }
-                set bname "${regname}B_${fieldname}"
                 set fname "${regname}F_${fieldname}"
                 set hexmask [expr {$bitmask << $bitnum}]
-                puts [format "%-23s 0x%04X" "#define $fname" $hexmask]
+                puts [format "%-31s 0x%04X" "#define $fname" $hexmask]
                 set nextnum [expr {$bitnum - 1}]
         }
 }
@@ -73,7 +72,9 @@ set hname CUSTOMBITS_H_
 puts "#ifndef $hname"
 puts "#define $hname"
 puts ""
-puts "/* This file contains bit definitions for the Amiga custom chips. */"
+puts "/* This file was generated [exec date -I] */"
+puts ""
+puts "/* Bit definitions for Amiga custom chips */"
 puts ""
 foreach reg $regs {
         printreg $reg

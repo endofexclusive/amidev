@@ -64,7 +64,7 @@ SECTIONS
     *(COMMON)
     . = ALIGN (0x4);
     __bss_end = .;
-    __bss_size = __bss_start - __bss_start;
+    __bss_size = __bss_end - __bss_start;
   } > chip
 }
 
